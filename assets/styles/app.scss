@@ -5,7 +5,8 @@
 @import "tailwindcss/utilities";
 
 $backgroundColor: hsla(1, 20%, 95%, 1);
-$ionosBlue: #003d8f;
+/* $ionosBlue: #003d8f; */
+$ionosBlue: #F7B41C;
 
 body { background: $backgroundColor; color: $ionosBlue; display: flex; font: 16px/1.5 sans-serif; justify-content: center; margin: 0; }
 h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
