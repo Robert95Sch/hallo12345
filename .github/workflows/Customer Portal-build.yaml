@@ -19,12 +19,12 @@ env:
 jobs:
 # Please do not rename this job
   build-project:
-    name: build hallo12345
+    name: build Customer Portal
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
-      # if you add permissions here this needs to be done in the hallo12345-orchestration.yaml as well
+      # if you add permissions here this needs to be done in the Customer Portal-orchestration.yaml as well
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -35,7 +35,7 @@ jobs:
         uses: ionos-deploy-now/template-renderer-action@v2
         id: template
         with:
-          input-directory: .deploy-now/hallo12345
+          input-directory: .deploy-now/Customer Portal
           output-directory: ${{ env.DEPLOYMENT_FOLDER }}
           intermediate-data-file: ${{ env.DEPLOYMENT_FOLDER }}/.template-renderer-data
 
@@ -74,4 +74,4 @@ jobs:
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
           action: upload
-          config-file: .deploy-now/hallo12345/config.yaml
+          config-file: .deploy-now/Customer Portal/config.yaml
